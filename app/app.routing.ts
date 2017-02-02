@@ -1,12 +1,14 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+// - need to bring in components we want to use in the router
 import {UserComponent} from './components/user.component';
 import {AboutComponent} from './components/about.component';
 import {GithubComponent} from './components/github.component';
 
 const appRoutes: Routes = [
     {
+        // - root path
         path: '',
         component: UserComponent
     },
@@ -17,6 +19,10 @@ const appRoutes: Routes = [
     {
         path: 'github',
         component: GithubComponent
+    },
+    {
+        path: 'spotify',
+        component: UserComponent
     }
 ];
 

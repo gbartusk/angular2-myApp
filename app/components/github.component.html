@@ -1,63 +1,65 @@
-<div class="row">
-    <div class="col-md-12">
-        <form>
-            <div class="form-group">
-                <!-- remove .enter from keyup and it will just dynamically run search, however this is taxing on github search limit -->
-                <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup.enter)="search()" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div *ngIf="user">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{user.login}}</h3>
-        </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <!-- remove .enter from keyup and it will just dynamically run search, however this is taxing on github search limit -->
+                    <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup.enter)="search()" />
                 </div>
-                <div class="col-md-8">
-                    <div class="stats">
-                        <span class="label label-default">Public Repos: {{user.public_repos}}</span>
-                        <span class="label label-primary">Public Gists: {{user.public_gists}}</span>
-                        <span class="label label-success">Public Followers : {{user.followers}}</span>
-                        <span class="label label-info">Public Following : {{user.following}}</span>
+            </form>
+        </div>
+    </div>
+
+    <div *ngIf="user">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{user.login}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}" />
                     </div>
-                    <br />
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
-                        <li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
-                        <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
-                        <li class="list-group-item"><strong>Blog: </strong>{{user.blog}}</li>
-                        <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at}}</li>
-                    </ul>
+                    <div class="col-md-8">
+                        <div class="stats">
+                            <span class="label label-default">Public Repos: {{user.public_repos}}</span>
+                            <span class="label label-primary">Public Gists: {{user.public_gists}}</span>
+                            <span class="label label-success">Public Followers : {{user.followers}}</span>
+                            <span class="label label-info">Public Following : {{user.following}}</span>
+                        </div>
+                        <br />
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
+                            <li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
+                            <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
+                            <li class="list-group-item"><strong>Blog: </strong>{{user.blog}}</li>
+                            <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at}}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">Repos</h3>
-        </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <div *ngFor="let repo of repos">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
-                                <p>{{repo.description}}</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Repos</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div *ngFor="let repo of repos">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                                    <p>{{repo.description}}</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="label label-default">{{repo.watchers}} Repos</span>
+                                    <span class="label label-primary">{{repo.forks}} Forks</span>
+                                </div>
                             </div>
-                            <div class="col-md-3">
-                                <span class="label label-default">{{repo.watchers}} Repos</span>
-                                <span class="label label-primary">{{repo.forks}} Forks</span>
-                            </div>
+                            <hr />
                         </div>
-                        <hr />
                     </div>
                 </div>
             </div>
