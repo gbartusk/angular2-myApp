@@ -5,9 +5,11 @@ import { HttpModule } from '@angular/http';
 import { routing } from './app.routing';
 
 import { AppComponent }  from './app.component';
-import { UserComponent }  from './components/user.component';
-import { AboutComponent }  from './components/about.component';
-import { GithubComponent }  from './components/github.component';
+import { JunkuserComponent }  from './components/junk/junkuser.component';
+import { JunkaboutComponent }  from './components/junk/junkabout.component';
+import { GithubComponent }  from './components/github/github.component';
+
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 /*
 Modules
@@ -23,7 +25,7 @@ Components
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, routing ],
-  declarations: [ AppComponent, UserComponent, AboutComponent, GithubComponent ],
+  declarations: [ AppComponent, JunkuserComponent, JunkaboutComponent, GithubComponent, NavbarComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

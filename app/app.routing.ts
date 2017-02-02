@@ -1,20 +1,20 @@
-import {ModuleWithProviders} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 // - need to bring in components we want to use in the router
-import {UserComponent} from './components/user.component';
-import {AboutComponent} from './components/about.component';
-import {GithubComponent} from './components/github.component';
+import { JunkuserComponent } from './components/junk/junkuser.component';
+import { JunkaboutComponent } from './components/junk/junkabout.component';
+import { GithubComponent } from './components/github/github.component';
 
 const appRoutes: Routes = [
     {
         // - root path
         path: '',
-        component: UserComponent
+        component: JunkuserComponent
     },
     {
         path: 'about',
-        component: AboutComponent
+        component: JunkaboutComponent
     },
     {
         path: 'github',
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'spotify',
-        component: UserComponent
+        component: JunkuserComponent
     }
 ];
 

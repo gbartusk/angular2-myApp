@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {PostsService} from '../services/post.service'
+import {PostsService} from '../../services/post.service'
 
 @Component({
   selector: 'about',
@@ -16,7 +16,7 @@ import {PostsService} from '../services/post.service'
     `,
     providers:[PostsService]
 })
-export class AboutComponent  {
+export class JunkaboutComponent  {
     pageTitle: string;
     konsilaGretting: KonsilaGreeting;
 

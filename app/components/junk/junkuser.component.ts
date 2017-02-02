@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import {PostsService} from '../services/post.service'
+import { PostsService } from '../../services/post.service'
 
 @Component({
     // - need to use this to have relative paths
     moduleId: module.id,
     selector: 'user',
-    templateUrl: 'user.component.html',
+    templateUrl: 'junkuser.component.html',
     providers:[PostsService]
 })
-export class UserComponent  {
+export class JunkuserComponent {
     name: string;
     email: string;
     address: address;
