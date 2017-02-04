@@ -7,6 +7,4 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     templateUrl: 'app.component.html',
     providers: [ NavbarComponent ]
 })
-export class AppComponent  {
-
-}
+export class AppComponent  {}

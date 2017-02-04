@@ -1,0 +1,8 @@
+<h1>Need Music?</h1>
+<p class="lead">Use the app to brow new release or classic hits!</p>
+<form>
+    <div class="form-group">
+        <!-- use brackers and parens around ngModel to do two way data binding -->
+        <input type="text" name="searchStr" (keyup.enter)="searchMusic()" [(ngModel)]="searchStr" class="form-control" placeholder="Search Music..." />
+    </div>
+</form>

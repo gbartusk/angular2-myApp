@@ -10,6 +10,8 @@ import { JunkaboutComponent }  from './components/junk/junkabout.component';
 import { GithubComponent }  from './components/github/github.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SearchComponent } from './components/spotify/search.component';
+import { AboutComponent } from './components/spotify/about.component';
 
 /*
 Modules
@@ -25,7 +27,7 @@ Components
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, routing ],
-  declarations: [ AppComponent, JunkuserComponent, JunkaboutComponent, GithubComponent, NavbarComponent ],
+  declarations: [ AppComponent, JunkuserComponent, JunkaboutComponent, GithubComponent, NavbarComponent, SearchComponent, AboutComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

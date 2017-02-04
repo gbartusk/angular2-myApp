@@ -1,22 +1,31 @@
 <nav class="navbar navbar-default">
     <div class="container">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">MyApp</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-        <!-- should we be using angular's routerLink tag for this? -->
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/github">GitHub</a></li>
-        <li><a routerLink="/spotify">Spotify</a></li>
-        </ul>
-    </div><!--/.nav-collapse -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">MyApp</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <!-- should we be using angular's routerLink tag for this? -->
+                <li><a routerLink="/about">About</a></li>
+                <li><a routerLink="/github">GitHub</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spotify<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">Core Features</li>
+                        <li><a routerLink="/spotify">Search</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-header">Extras</li>
+                        <li><a routerLink="/spotify-about">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

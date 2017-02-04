@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { JunkuserComponent } from './components/junk/junkuser.component';
 import { JunkaboutComponent } from './components/junk/junkabout.component';
 import { GithubComponent } from './components/github/github.component';
+import { SearchComponent } from './components/spotify/search.component';
+import { AboutComponent } from './components/spotify/about.component';
 
 const appRoutes: Routes = [
     {
@@ -22,7 +24,12 @@ const appRoutes: Routes = [
     },
     {
         path: 'spotify',
-        component: JunkuserComponent
+        component: SearchComponent
+    }
+    ,
+    {
+        path: 'spotify-about',
+        component: AboutComponent
     }
 ];
 
